@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Advent of Code 2021" Height="450" Width="800">
     <Window.Resources>    
         <ResourceDictionary>    
             <ResourceDictionary.MergedDictionaries>    
@@ -16,11 +16,31 @@
         <ImageBrush ImageSource="images\OIP.jpg"/>
     </Window.Background>
     <Grid>
-        <Button Style="{StaticResource btn-success}" Content="Run Advent" HorizontalAlignment="Left" Margin="101,99,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <ComboBox x:Name="DaySelect" HorizontalAlignment="Left" Margin="246,106,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="ComboBox_SelectionChanged">
+        <Button Style="{StaticResource btn-success}" Content="Run Advent" HorizontalAlignment="Left" Margin="101,99,0,0" VerticalAlignment="Top" Click="Button_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <ComboBox x:Name="DaySelect" HorizontalAlignment="Left" Margin="246,106,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="ComboBox_SelectionChanged" BorderBrush="#FFE27E10" OpacityMask="#FFDEB2B2">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FFE68C8C" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
             <ComboBoxItem IsSelected="True">Select Advent Day</ComboBoxItem>
             <ComboBoxItem>Day 1</ComboBoxItem>
         </ComboBox>
-        <TextBox x:Name="MainTextBox" HorizontalAlignment="Center" Height="167" Margin="0,167,0,0" Text="Select a day to see results" TextWrapping="Wrap" VerticalAlignment="Top" Width="598"/>
+        <TextBox x:Name="MainTextBox" HorizontalAlignment="Center" Height="167" Margin="0,167,0,0" Text="Select a day to see results" TextWrapping="Wrap" VerticalAlignment="Top" Width="598" Background="#FFE5D4D4">
+            <TextBox.Style>
+                <Style/>
+            </TextBox.Style>
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
     </Grid>
 </Window>

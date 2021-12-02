@@ -5,13 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>    
+        <ResourceDictionary>    
+            <ResourceDictionary.MergedDictionaries>    
+                <ResourceDictionary Source="ButtonStyles.xaml"/>    
+            </ResourceDictionary.MergedDictionaries>    
+        </ResourceDictionary>    
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="images\OIP.jpg"/>
+    </Window.Background>
     <Grid>
-        <TextBox x:Name="MainTextBox" HorizontalAlignment="Center" Height="167" Margin="0,217,0,0" Text="Select a day to see results" TextWrapping="Wrap" VerticalAlignment="Top" Width="598"/>
-        <Button Content="Run Advent" HorizontalAlignment="Left" Margin="101,99,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <ComboBox x:Name="DaySelect" HorizontalAlignment="Left" Margin="206,98,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="ComboBox_SelectionChanged">
+        <Button Style="{StaticResource btn-success}" Content="Run Advent" HorizontalAlignment="Left" Margin="101,99,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <ComboBox x:Name="DaySelect" HorizontalAlignment="Left" Margin="246,106,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem IsSelected="True">Select Advent Day</ComboBoxItem>
             <ComboBoxItem>Day 1</ComboBoxItem>
         </ComboBox>
-
+        <TextBox x:Name="MainTextBox" HorizontalAlignment="Center" Height="167" Margin="0,167,0,0" Text="Select a day to see results" TextWrapping="Wrap" VerticalAlignment="Top" Width="598"/>
     </Grid>
 </Window>

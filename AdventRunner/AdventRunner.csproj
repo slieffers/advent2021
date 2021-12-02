@@ -21,4 +21,11 @@
       <ProjectReference Include="..\Day1\Day1.fsproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Images\OIP.jpg" />
+      <Resource Include="images\OIP.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+    </ItemGroup>
+
 </Project>

@@ -12,7 +12,7 @@ namespace AdventRunner.AdventDays
             using TextReader tr = new StreamReader(@$"InputFiles\{day}.txt");
             return tr
                     .ReadToEnd()
-                    .Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries)
+                    .Split(new [] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries)
                     .ToList();
         }
     }

@@ -19,23 +19,26 @@ namespace AdventRunner.Helpers
             for (var i = 0; i < childrenCount; i++)
             {
                 DependencyObject child = VisualTreeHelper.GetChild(parent, i);
-                if (!(child is T))
+                if (child is not T dependencyObject)
                 {
                     foundChild = FindChild<T>(child, childName);
 
-                    if (foundChild != null) break;
+                    if (foundChild != null)
+                    {
+                        break;
+                    }
                 }
                 else if (!string.IsNullOrEmpty(childName))
                 {
-                    if (child is FrameworkElement frameworkElement && frameworkElement.Name == childName)
+                    if (dependencyObject is FrameworkElement frameworkElement && frameworkElement.Name == childName)
                     {
-                        foundChild = (T) child;
+                        foundChild = dependencyObject;
                         break;
                     }
                 }
                 else
                 {
-                    foundChild = (T) child;
+                    foundChild = dependencyObject;
                     break;
                 }
             }

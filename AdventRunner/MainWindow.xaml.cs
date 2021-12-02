@@ -3,13 +3,14 @@ using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
+using AdventRunner.Helpers;
 
 namespace AdventRunner
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         private string _daySelection = "";
 
@@ -20,8 +21,11 @@ namespace AdventRunner
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(_daySelection) || _daySelection == "Select Advent Day")
+            if (string.IsNullOrEmpty(_daySelection) || _daySelection == "SelectAdventDay")
             {
+                var textBox = Application.Current.MainWindow.FindChild<TextBox>("MainTextBox");
+                textBox.Text = "Select a day to see results";
+                
                 return;
             }
 

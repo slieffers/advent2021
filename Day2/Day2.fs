@@ -19,9 +19,7 @@ module Day2 =
             | _ -> (horiz, vert, aim)
         
     let findFinalPositionValue coordinates =
-        Seq.fold calculatePosition (0, 0) coordinates
-        |> (fun (a, b) -> a * b)
+        Seq.fold calculatePosition (0, 0) coordinates |> (fun (a, b) -> a * b)
         
     let findFinalPositionValueWithAim coordinates =
-        Seq.fold calculatePositionWithAim (0, 0, 0) coordinates
-        |> (fun (a, b, _) -> a * b)
+        Seq.fold calculatePositionWithAim (0, 0, 0) coordinates |> (fun (a, b, _) -> a * b)

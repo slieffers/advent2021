@@ -10,11 +10,11 @@ namespace AdventRunner.AdventDays
     {
         public static void Run()
         {
-            List<string> coords = GetFileContents(nameof(Day2))
+            List<string> codes = GetFileContents(nameof(Day3))
                     .ToList();
 
-            int finalPosition = FSharp.Code.Day3.findFinalPositionValue(coords);
-            int finalPositionWithAim = FSharp.Code.Day3.findFinalPositionValueWithAim(coords);
+            int finalPosition = FSharp.Code.Day3.decipherCodes(codes);
+            int finalPositionWithAim = FSharp.Code.Day3.decipherCodes(codes);
             
             var textBox = Application.Current.MainWindow.FindChild<TextBox>("MainTextBox");
             textBox.Text = $"Part 1: {finalPosition}\r\nPart 2: {finalPositionWithAim}";

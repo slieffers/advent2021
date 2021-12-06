@@ -34,6 +34,7 @@
             <ComboBoxItem IsSelected="True">Select Advent Day</ComboBoxItem>
             <ComboBoxItem>Day 1</ComboBoxItem>
             <ComboBoxItem>Day 2</ComboBoxItem>
+            <ComboBoxItem>Day 3</ComboBoxItem>
         </ComboBox>
         <TextBox x:Name="MainTextBox" HorizontalAlignment="Center" Height="167" Margin="0,167,0,0" Text="Select a day to see results" TextWrapping="Wrap" VerticalAlignment="Top" Width="598" Background="#FFE5D4D4">
             <TextBox.Style>

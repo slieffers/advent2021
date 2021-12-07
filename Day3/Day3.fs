@@ -27,7 +27,7 @@ module Day3 =
         toBinary (Seq.map calculateGamma finalCode) * toBinary (Seq.map calculateEpsilon finalCode)
         
     let decipherCodes (codes: seq<string>) =
-        let threshold = (ceil ((float (Seq.length codes)) / (float 2.0)) |> int)
+        let threshold = (ceil ((float (Seq.length codes)) /  2.0) |> int)
         let acc = (Seq.init (Seq.length codes) (fun _ -> 0))
         Seq.fold processCode acc codes
         |> determineFinalCodeValues (determineGamma threshold) (determineEpsilon threshold)

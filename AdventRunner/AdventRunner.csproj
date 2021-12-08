@@ -22,16 +22,13 @@
       <Content Include="InputFiles\Day3.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Include="InputFiles\Day4.1.Test.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Include="InputFiles\Day4.2.Test.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
       <Content Include="InputFiles\Day4.2.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Include="InputFiles\Day4.1.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="InputFiles\Day5.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
@@ -41,6 +38,8 @@
       <ProjectReference Include="..\Day2\Day2.fsproj" />
       <ProjectReference Include="..\Day3\Day3.fsproj" />
       <ProjectReference Include="..\Day4\Day4.csproj" />
+      <ProjectReference Include="..\Day5CSharp\Day5CSharp.csproj" />
+      <ProjectReference Include="..\Day5\Day5.vbproj" />
     </ItemGroup>
 
     <ItemGroup>

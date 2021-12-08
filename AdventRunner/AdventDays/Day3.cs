@@ -10,7 +10,7 @@ namespace AdventRunner.AdventDays
     {
         public static void Run()
         {
-            List<string> codes = GetFileContents(nameof(Day3))
+            List<string> codes = GetNewlineSeparatedFileContents(nameof(Day3))
                     .ToList();
 
             int finalPosition = FSharp.Code.Day3.decipherPowerConsumptionCodes(codes);

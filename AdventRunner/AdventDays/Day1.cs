@@ -10,7 +10,7 @@ namespace AdventRunner.AdventDays
     {
         public static void Run()
         {
-            List<int> numbers = GetFileContents(nameof(Day1))
+            List<int> numbers = GetNewlineSeparatedFileContents(nameof(Day1))
                     .Select(int.Parse)
                     .ToList();
 

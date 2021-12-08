@@ -10,7 +10,7 @@ namespace AdventRunner.AdventDays
     {
         public static void Run()
         {
-            List<string> coords = GetFileContents(nameof(Day2))
+            List<string> coords = GetNewlineSeparatedFileContents(nameof(Day2))
                     .ToList();
 
             int finalPosition = FSharp.Code.Day2.findFinalPositionValue(coords);

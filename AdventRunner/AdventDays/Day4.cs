@@ -16,8 +16,8 @@ namespace AdventRunner.AdventDays
             List<string> boards = GetNewlineSeparatedFileContents("Day4.2")
                 .ToList();
 
-            int winningValue = CSharp.Code.Day4.GetWinningBoard(numbers, boards);
-            int losingValue = CSharp.Code.Day4.GetLosingBoard(numbers, boards);
+            int winningValue = global::Day4.Day4.GetWinningBoard(numbers, boards);
+            int losingValue = global::Day4.Day4.GetLosingBoard(numbers, boards);
             
             var textBox = Application.Current.MainWindow.FindChild<TextBox>("MainTextBox");
             textBox.Text = $"Part 1: {winningValue}\r\nPart 2: {losingValue}";

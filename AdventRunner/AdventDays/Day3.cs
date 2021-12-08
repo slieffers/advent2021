@@ -14,7 +14,7 @@ namespace AdventRunner.AdventDays
                     .ToList();
 
             int finalPosition = FSharp.Code.Day3.decipherPowerConsumptionCodes(codes);
-            int finalPositionWithAim = FSharp.Code.Day3.decipherPowerConsumptionCodes(codes);
+            int finalPositionWithAim = FSharp.Code.Day3.decipherLifeSupportCodes(codes);
             
             var textBox = Application.Current.MainWindow.FindChild<TextBox>("MainTextBox");
             textBox.Text = $"Part 1: {finalPosition}\r\nPart 2: {finalPositionWithAim}";

@@ -10,6 +10,10 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Day3", "Day3\Day3.fsproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day4", "Day4\Day4.csproj", "{B4F9BB38-E611-408E-AE0C-B832B7D637CC}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Day5", "Day5\Day5.vbproj", "{25D242BE-C349-4687-AFE7-44EE01BD4824}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day5CSharp", "Day5CSharp\Day5CSharp.csproj", "{59F64202-C26A-41B4-995F-2809E5BA14DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,13 @@ Global
 		{B4F9BB38-E611-408E-AE0C-B832B7D637CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4F9BB38-E611-408E-AE0C-B832B7D637CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4F9BB38-E611-408E-AE0C-B832B7D637CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25D242BE-C349-4687-AFE7-44EE01BD4824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25D242BE-C349-4687-AFE7-44EE01BD4824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25D242BE-C349-4687-AFE7-44EE01BD4824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25D242BE-C349-4687-AFE7-44EE01BD4824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59F64202-C26A-41B4-995F-2809E5BA14DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F64202-C26A-41B4-995F-2809E5BA14DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F64202-C26A-41B4-995F-2809E5BA14DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F64202-C26A-41B4-995F-2809E5BA14DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

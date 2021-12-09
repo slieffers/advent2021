@@ -18,16 +18,16 @@ Public Class Day5
 End Class
 
 Public Structure Coord
-    Private X As Int32
-    Private Y As Int32
+    Private _x As Int32
+    Private _y As Int32
 
     public Shared Function CreateCoord(rawCoord As String) As Coord
 
         Dim returnCoord = New Coord()
         
         Dim coordElements As List(Of String) = rawCoord.Split(",").ToList()
-        returnCoord.X = Int32.Parse(coordElements.Item(0))
-        returnCoord.Y = Int32.Parse(coordElements.Item(1))
+        returnCoord._x = Int32.Parse(coordElements.Item(0))
+        returnCoord._y = Int32.Parse(coordElements.Item(1))
 
         Return returnCoord
     End Function
@@ -35,8 +35,8 @@ Public Structure Coord
     Private Shared Function CreateCoord(x As Integer, y As Integer) As Coord
         Dim returnCoord = new Coord()
         
-        returnCoord.X = x
-        returnCoord.Y = y
+        returnCoord._x = x
+        returnCoord._y = y
 
         Return returnCoord
     End Function
@@ -44,18 +44,18 @@ Public Structure Coord
     Public Shared Function GetNonDiagCoordsLine(coord1 As Coord, coord2 As Coord) As IEnumerable(Of Coord)
         Dim line = new List(Of Coord)()
         
-        If(coord1.X <> coord2.X And coord1.Y <> coord2.Y) Then
+        If(coord1._x <> coord2._x And coord1._y <> coord2._y) Then
             Return line
         End If
         
-        If (coord1.X < coord2.X) Then
-            line = (From x In Enumerable.Range(coord1.X, coord2.X - coord1.X + 1) Select Coord.CreateCoord(x, coord1.Y)).ToList()
-        Else If (coord2.X < coord1.X) Then
-            line = (From x In Enumerable.Range(coord2.X, coord1.X - coord2.X + 1) Select Coord.CreateCoord(x, coord1.Y)).ToList()
-        Else If (coord1.Y < coord2.Y) Then
-            line = (From y In Enumerable.Range(coord1.Y, coord2.Y - coord1.Y + 1) Select Coord.CreateCoord(coord1.X, y)).ToList()
-        Else If (coord2.Y < coord1.Y) Then
-            line = (From y In Enumerable.Range(coord2.Y, coord1.Y - coord2.Y + 1) Select Coord.CreateCoord(coord1.X, y)).ToList()
+        If (coord1._x < coord2._x) Then
+            line = (From x In Enumerable.Range(coord1._x, coord2._x - coord1._x + 1) Select Coord.CreateCoord(x, coord1._y)).ToList()
+        Else If (coord2._x < coord1._x) Then
+            line = (From x In Enumerable.Range(coord2._x, coord1._x - coord2._x + 1) Select Coord.CreateCoord(x, coord1._y)).ToList()
+        Else If (coord1._y < coord2._y) Then
+            line = (From y In Enumerable.Range(coord1._y, coord2._y - coord1._y + 1) Select Coord.CreateCoord(coord1._x, y)).ToList()
+        Else If (coord2._y < coord1._y) Then
+            line = (From y In Enumerable.Range(coord2._y, coord1._y - coord2._y + 1) Select Coord.CreateCoord(coord1._x, y)).ToList()
         End If
         
         Return line
